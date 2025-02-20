@@ -1,0 +1,14 @@
+digraph "Caso de Uso - Borrar un Video" {
+	C [label="Creador de Contenido" shape=ellipse]
+	A [label=Administrador shape=ellipse]
+	S [label="Subir un Video" shape=ellipse]
+	B [label="Borrar un Video" shape=ellipse]
+	M [label="Mostrar Mensaje de Confirmación" shape=ellipse]
+	R [label="Recuperar un Video (Papelera)" shape=ellipse]
+	C -> S [label="Sube videos"]
+	C -> B [label="Borra sus propios videos"]
+	A -> B [label="Puede borrar cualquier video"]
+	B -> S [label="Depende de" style=dashed]
+	B -> M [label=Incluye style=dashed]
+	R -> B [label=Extiende style=dashed]
+}
